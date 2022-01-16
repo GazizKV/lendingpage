@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+html {
+    background: #4b3116;
+}
+
+* {
+    word-break: normal;
+}
+a {
+    text-decoration: none;
+    color: #36210c;
+}
+/*-------------------общая обертка----------------------------------*/
+.wrap {
+    -webkit-box-shadow: 0px 0px 14px 11px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 14px 11px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 14px 11px rgba(0,0,0,0.75);
+    width: 900px;
+    height: 2080px;
+    margin: 100px auto;
+    background: #f3a561;
+    overflow: hidden;
+    border-radius: 50px;
+    background-image: url("images/layer5.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    position: relative;
+}
+/*-------------------------заголовок-----------------------------------*/
+.head-content {
+    flex-wrap: wrap;
+    width: 600px;
+    height: 400px;
+    margin: 30px;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5em;
+    letter-spacing: 8px;
+    color: #36210c;
+    margin-bottom: 60px;
+    padding: 0;
+    text-shadow: 5px 9px 8px #36210c;
+    margin-left: 30px;
+}
+p.head-text {
+    display: flex;
+    width: 100%;
+    color: #36210c;
+    font-size: 2em;
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+    font-weight: bolder;
+    letter-spacing: 2px;
+}
+/*-----------------------------контент посредине))-----------------------*/
+.content {
+    margin-top: 40px;
+    flex-wrap: wrap;
+    width: 70%;
+    text-align: center;
+    float: right;
+    margin-right: 25px;
+    letter-spacing: 2px;
+    flex-direction: row-reverse;
+    display: flex;
+}
+
+p.content-p {
+    width: 80%;
+    text-align: center;
+    color: #36210c;
+    font-size: 16px;
+    font-family: 'Lato', sans-serif;
+    font-weight: bolder;
+}
+
+.name {
+    width: 80%;
+    color: #36210c;
+    font-size: 24px;
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+    letter-spacing: 2px;
+    font-weight: bolder;
+}
+.bg-shane {
+    display: flex;
+}
+.socmed {
+    width: 60px;
+    display: flex;
+    float: right;
+    margin: 20px 40px 20px 40px;
+}
+/*-------------------слайдер-----------------------------------*/
+.slider-content {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.slider-wrap {
+    position: relative;
+    width: 600px;
+    height: 300px;
+    margin: 50px auto;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 0px 14px 11px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 14px 11px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 14px 11px rgba(0,0,0,0.75);
+    overflow: hidden;
+}
+input[type=radio] {
+    display: none;
+}
+.label {
+    width: inherit;
+    position: absolute;
+    bottom: 16px;
+    text-align: center;
+    z-index: 3;
+}
+div.label label {
+    display: inline-block;
+    width: 9px;
+    height: 9px;
+    background: white;
+    margin: 5px;
+    border-radius: 50%;
+    border: 5px solid black;
+
+    cursor: pointer;
+}
+#img1:checked ~ .label label[for="img1"] {
+    background-color: #8262af;
+    box-shadow: 0 0 3px 3px #d6d6d6;
+}
+#img2:checked ~ .label label[for="img2"] {
+    background-color: #8262af;
+    box-shadow: 0 0 3px 3px #d6d6d6;
+}
+#img3:checked ~ .label label[for="img3"] {
+    background-color: #8262af;
+    box-shadow: 0 0 3px 3px #d6d6d6;
+}
+.image {
+    overflow: hidden;
+}
+.images {
+    width: 300%;
+    transition: all 0.5s;
+}
+.images img {
+    float: left;
+    width: 600px;
+    height: 300px;
+}
+#img1:checked ~ .image .images {
+    transform: translate(0);
+}
+
+#img2:checked ~ .image .images {
+    transform: translate(-600px);
+}
+
+#img3:checked ~ .image .images {
+    transform: translate(-1200px);
+}
+/*--------------------------конетент после сдлайдера--------------------------------------*/
+.bf-moto {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5em;
+    letter-spacing: 5px;
+    color: #36210c;
+    margin-bottom: 20px;
+    padding: 0;
+    text-shadow: 5px 9px 8px #36210c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+}
+.sponosrs {
+    display: flex;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.footer-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.babochka-img {
+    display: flex;
+    width: 420px;
+    margin: 20px 0 0 40px;
+}
+.footer-QR {
+    display: flex;
+    flex-wrap: wrap;
+    width: 400px;
+    margin-left: 20px;
+    /*padding-top: 40px;*/
+    align-items: center;
+    justify-content: center;
+}
+.QRcod {
+    width: 400px;
+}
+.footer-content {
+    display: flex;
+    color: #36210c;
+    font-size: 32px;
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+    font-weight: bolder;
+    letter-spacing: 2px;
+    line-height: 40px;
+    margin: 0;
+}
+
+/*----------------------подвал-----------------------------*/
+.bottom {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 120px;
+    background: black;
+    align-content: center;
+    justify-content: left;
+}
+.ikons {
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    justify-content: center;
+}
+.footer-contackt {
+    color: white;
+}
+.p-footer {
+    color: white;
+}
